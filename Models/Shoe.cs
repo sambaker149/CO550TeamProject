@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CO550TeamProject.Models
+{
+    public class Shoe
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required, StringLength(100)]
+        public string Name { get; set; }
+        [Required, StringLength(100)]
+        public string Image { get; set; }
+        [StringLength(250)]
+        public string Description { get; set; }
+        [Required, Range(15.00, 100.00)]
+        public decimal Price { get; set; }
+    }
+}
