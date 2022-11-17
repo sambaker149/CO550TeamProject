@@ -1,0 +1,49 @@
+﻿@page
+@model CO550TeamProject.Pages.CustomerPayments.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CustomerPayment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerPayment.CardNumber" class="control-label"></label>
+                <input asp-for="CustomerPayment.CardNumber" class="form-control" />
+                <span asp-validation-for="CustomerPayment.CardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerPayment.ExpiryMonth" class="control-label"></label>
+                <input asp-for="CustomerPayment.ExpiryMonth" class="form-control" />
+                <span asp-validation-for="CustomerPayment.ExpiryMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerPayment.ExpiryYear" class="control-label"></label>
+                <input asp-for="CustomerPayment.ExpiryYear" class="form-control" />
+                <span asp-validation-for="CustomerPayment.ExpiryYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerPayment.CVVNumber" class="control-label"></label>
+                <input asp-for="CustomerPayment.CVVNumber" class="form-control" />
+                <span asp-validation-for="CustomerPayment.CVVNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

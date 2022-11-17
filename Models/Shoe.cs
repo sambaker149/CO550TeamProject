@@ -14,7 +14,7 @@ namespace CO550TeamProject.Models
         public string Image { get; set; } = String.Empty;
 
         [StringLength(250)]
-        public string Description { get; set; } = string.Empty;
+        public string Description { get; set; } = String.Empty;
 
         [Required, Range(15.00, 100.00)]
         public decimal Price { get; set; }

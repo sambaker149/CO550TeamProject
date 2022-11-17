@@ -1,0 +1,54 @@
+﻿@page
+@model CO550TeamProject.Pages.CustomerAddresses.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CustomerAddress</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress.HouseNumber" class="control-label"></label>
+                <input asp-for="CustomerAddress.HouseNumber" class="form-control" />
+                <span asp-validation-for="CustomerAddress.HouseNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress.HouseName" class="control-label"></label>
+                <input asp-for="CustomerAddress.HouseName" class="form-control" />
+                <span asp-validation-for="CustomerAddress.HouseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress.RoadName" class="control-label"></label>
+                <input asp-for="CustomerAddress.RoadName" class="form-control" />
+                <span asp-validation-for="CustomerAddress.RoadName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress.PostTown" class="control-label"></label>
+                <input asp-for="CustomerAddress.PostTown" class="form-control" />
+                <span asp-validation-for="CustomerAddress.PostTown" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress.Postcode" class="control-label"></label>
+                <input asp-for="CustomerAddress.Postcode" class="form-control" />
+                <span asp-validation-for="CustomerAddress.Postcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
