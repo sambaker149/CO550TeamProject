@@ -6,7 +6,7 @@ namespace CO550TeamProject.Data
     {
         public static void Initialize(ApplicationDbContext context)
         {
-            // Look for any students.
+            // Look for any customers.
             if (context.Customer.Any())
             {
                 return;   // DB has been seeded
@@ -14,7 +14,7 @@ namespace CO550TeamProject.Data
 
             var customers = new Customer[]
             {
-                new Customer{Name="",DateOfBirth=,Email="",PhoneNumber=""}
+                new Customer{Name="",DateOfBirth=DateTime.Parse(""),Email="",PhoneNumber=""}
             };
 
             context.Customer.AddRange(customers);

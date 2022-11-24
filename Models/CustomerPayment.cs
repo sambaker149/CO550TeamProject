@@ -7,8 +7,8 @@ namespace CO550TeamProject.Models
         [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(12)]
-        public int CardNumber { get; set; }
+        [Required, MaxLength(16)]
+        public long CardNumber { get; set; }
 
         [Required, MaxLength(2)]
         public int ExpiryMonth { get; set; }
